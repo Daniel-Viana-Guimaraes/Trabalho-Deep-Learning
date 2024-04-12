@@ -70,7 +70,7 @@ class IncomeCreditRatioAdder(BaseEstimator, TransformerMixin):
 preprocessor = ColumnTransformer(
     transformers=[
         ("numerical", StandardScaler(), num),
-        ("categorical", OneHotEncoder(sparse=False, handle_unknown='ignore'), cat),
+        ("categorical", OneHotEncoder(sparse_output=False, handle_unknown='ignore'), cat),
     ]
 )
 
